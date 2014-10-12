@@ -9,6 +9,15 @@ Spree.config do |config|
   # Example:
   # Uncomment to stop tracking inventory levels in the application
   # config.track_inventory_levels = false
+
+  config.use_s3 = true
+  config.s3_bucket = "basement-images"
+  config.s3_access_key = "AKIAJGPCM7TFZUFGSHBA"
+  config.s3_secret = "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"
 end
 
 Spree.user_class = "Spree::User"
+
+Paperclip.interpolates(:s3_eu_url) do |attachment, style|
+  "#{attachment.s3_protocol}://#{Spree::Config[:s3_host_alias]}/#{attachment.bucket_name}/#{attachment.path(style).gsub(%r{^/},"")}"
+end
