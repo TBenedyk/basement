@@ -1,0 +1,18 @@
+<div class="row">
+	<div class="col-md-3">
+		<aside class="sidebar">
+   			<%= render partial: 'spree/shared/taxonomies' %>
+  			<%= render partial: "spree/shared/filters" %>
+		</aside>
+	</div>
+	<div class="col-md-9">
+		<div class="catalog">
+			<h1 class="taxon-title"><%= @taxon.name %></h1>
+				<% if @products.empty? %>
+	      			<h6 class="search-results-title"><%= Spree.t(:no_products_found) %></h6>
+	    		<% else %>
+	      			<%= render :partial => 'spree/shared/products', :locals => { :products => @products, :taxon => @taxon } %>
+	    		<% end %>
+		</div>
+	</div>
+</div>

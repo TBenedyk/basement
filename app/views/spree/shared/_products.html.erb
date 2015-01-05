@@ -1,0 +1,15 @@
+<%
+ paginated_products = @searcher.retrieve_products if params.key?(:keywords)
+ paginated_products ||= products
+%>
+<% @products.each_slice(3) do |slice| %>
+
+<div class="row">
+	<% slice.each do |product| -%>
+		<div class="col-xs-4 animation">
+			<%= render "spree/products/product", :product => product %>
+		</div>
+	<% end -%>
+</div>
+<% end %>
+<%= paginate paginated_products %>

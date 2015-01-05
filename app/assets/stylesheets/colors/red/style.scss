@@ -1,0 +1,375 @@
+//Core mixins
+@import "../../mixins/_mixins";
+@import "_variables.scss";
+
+a {
+	@include main-links;
+	@include transition;	
+	&:hover, &:focus {
+		text-decoration: none;	
+	}
+}
+
+.btn {
+	&:hover, &:focus {
+		@include main-bg;
+		@include main-border-color;
+	}
+}
+
+.btn-primary {
+	@include main-bg;
+    @include main-border-color;
+	&:hover, &:focus {
+		background-color: $dark;
+		border-color: $dark;
+	}
+}
+
+.btn-active {
+	@include main-bg;
+	@include main-border-color;
+}
+
+.post-image {
+	@include main-bg;
+}
+
+.post-meta {
+	a {
+		@include main-color;
+		&:hover, &:focus {
+			color: $dark;
+		}
+	}
+}
+
+.price {
+	@include main-color;
+}
+
+.product-thumb-info-content {
+	.item-cat a {
+		&:hover, &:focus {
+			@include main-color;
+		}
+	}
+}
+
+.product-thumb-info-act {
+	a {
+		&:hover, &:focus {
+			@include main-bg;
+			color: $white;
+		}
+	}
+}
+
+/* menu-shop */
+.menu-shop {
+	.dropdown-menu {
+		a {
+			&:hover, &:focus {
+				@include main-color;
+			}
+		}
+		.item-cat a {
+			&:hover, &:focus {
+				@include main-color;
+			}
+		}
+	} /* end dropdown-menu*/	
+}
+
+/* My Account */
+.my-account .dropdown-menu {
+	> li > a {
+		&:hover, &:focus {
+			@include main-color;
+		}
+	}
+}
+
+.navbar-main .navbar-nav {
+	> li > a {
+		@include main-links;
+	}
+	> .active > a,
+	> .active > a:hover,
+	> .active > a:focus,
+	> .open > a,
+	> .open > a:hover,
+	> .open > a:focus,
+	.open .dropdown-menu > .active > a,
+	.open .dropdown-menu > .active > a:hover,
+	.open .dropdown-menu > .active > a:focus {
+		@include main-color;
+		background-color: transparent;
+	}
+	.dropdown-menu {
+		li a {
+			&:hover, &:focus {
+				@include main-color;
+			}
+		}
+		> .active > a,
+		> .active > a:hover,
+		> .active > a:focus {
+			background-color: transparent;
+			@include main-color;
+		}
+		.item-cat a {
+			&:hover, &:focus {
+				@include main-color;
+			}
+		}
+	}
+}
+
+.nav-white > .megamenu {
+	.dropdown-menu {
+		li a {
+			color: $greyer;
+			&:hover, &:focus {
+				@include main-color;
+			}
+		}
+	}
+	.mega-menu-content {
+		.sub-menu > li > a {
+			color: $greyer;
+			&:hover, &:focus {
+				@include main-color;
+			}
+		}
+	}
+}
+
+/* login */
+.login-wrapper {
+	a {
+		color: $white;
+		&:hover, &:focus {
+			@include main-color;
+		}
+	}
+}
+
+.owl-carousel .item {
+	.item-caption {
+		.item-cat a {
+			color: $white;
+			&:hover, &:focus {
+				@include main-color;
+			}
+		}
+	}
+}
+
+.owl-theme .owl-controls .owl-buttons .owl-prev,
+.owl-theme .owl-controls .owl-buttons .owl-next {
+	&:hover, &:focus {
+		@include main-bg;
+	}
+}
+/* product slide */
+.product-slide {
+	.owl-controls {
+		.owl-buttons .owl-prev,
+		.owl-buttons .owl-next {
+			@include main-links;
+			&:hover, &:focus {
+				background-color: transparent;
+				@include main-border-color;
+			}
+		}
+	}
+}
+
+.product-remove a {
+	&:hover, &:focus {
+		@include main-color;
+	}
+}
+
+.shop_table {
+	td.product-subtotal {
+		@include main-color;
+	}
+}
+
+.cart-totals {
+	.total .amount {
+		@include main-color;
+	}
+}
+
+.shopping-bag {
+	@include main-bg;
+}
+
+/* lookbook */
+.lookbook {
+	h2 {
+		a {
+			&:hover, &:focus {
+				@include main-color;
+			}
+		}
+	}
+}
+
+.upper-foot {
+	a {
+		&:hover, &:focus {
+			@include main-color;
+		}
+	}
+}
+
+/* tags */
+.tagclouds a {
+	&:hover, &:focus {
+		@include main-color;
+		@include main-border-color;
+	}
+}
+
+.below-foot {
+	a {
+		@include main-color;
+		&:hover, &:focus {
+			color: $grey;
+		}
+	}
+}
+
+/* highlights */
+.wp-ads {
+	li {
+		@include main-bg;
+		+ li {
+			background-color: rgba($primary-color, 0.9);
+			+ li {
+				background-color: rgba($primary-color, 0.8);
+				+ li {
+					background-color: rgba($primary-color, 0.7);
+					+ li {
+						background-color: rgba($primary-color, 0.6);
+					}
+				}
+			}
+		}
+	}
+}
+
+/* page-top */
+.page-top {
+	@include main-bg;
+}
+
+.second-tabs {
+	li {
+		&.active {
+			&:after {
+				@include arrow-down;
+			}
+			a {
+				@include main-bg;
+			}
+		}
+	}/* end li */
+}
+
+/* drop caps */
+.drop-caps:first-letter {
+	@include main-color;
+}
+
+.drop-caps.secondary:first-letter {
+	@include main-bg;
+}
+
+/* Scroll to Top */
+.scroll-to-top {
+	@include main-bg;
+	&:hover, &:focus {
+		background-color: $dark;
+	}
+}
+
+.post {
+	.btn {
+		&:hover, &:focus {
+			@include main-bg;
+			@include main-border-color;
+		}
+	}
+	blockquote {
+		p {
+			@include main-bg;
+		}
+		footer {
+			&:after {
+				@include arrow-down;
+				bottom: 35px;
+			}
+		}
+	}
+}
+
+/* single post */
+.blog-single-post {
+	blockquote {
+		p {
+			background-color: transparent;
+		}
+	}
+}
+
+/* pagination */
+.pagination {
+	> li > a:hover,
+	> li > span:hover,
+	> li > a:focus, 
+	> li > span:focus,
+	> .active > a,
+	> .active > span,
+	> .active > a:hover,
+	> .active > span:hover,
+	> .active > a:focus,
+	> .active > span:focus {
+		@include main-bg;
+		@include main-border-color;
+	}
+}
+
+#price-range { .ui-slider-horizontal .ui-slider-range { @include main-bg; } }
+/**/
+.navbar-default .navbar-toggle {
+	&:hover, &:focus {
+		.icon-bar {
+			@include main-bg;
+		}
+	}
+	
+}
+
+/* home 4 */
+.navbar-main-drop {
+	.navbar-collapse .navbar-nav {
+		> li > a {
+			&:hover, &:focus {
+				@include main-bg;
+			}
+		}
+		> .active > a,
+		> .active > a:hover,
+		> .active > a:focus,
+		> .open > a,
+		> .open > a:hover,
+		> .open > a:focus {
+			@include main-bg;
+		}
+	}
+}

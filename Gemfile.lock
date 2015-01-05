@@ -288,6 +288,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
+  font-awesome-rails
   jbuilder (~> 2.0)
   jquery-rails
   pg

@@ -1,0 +1,22 @@
+<div class="modal fade bs-example-modal-lg search-wrapper" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<p class="clearfix"><button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button></p>
+			<% @taxons = @taxon && @taxon.parent ? @taxon.parent.children : Spree::Taxon.roots %>
+			<%= form_tag spree.products_path, :method => :get, :class => "form-inline form-search", :role => "form" do %>
+
+				<div class="form-group">
+					<label class="sr-only" for="textsearch">Enter text search</label>
+					<%= search_field_tag :keywords, params[:keywords], :placeholder => Spree.t(:search), :class => "form-control input-lg", :id => "textsearch" %>
+				</div>
+				<%= submit_tag Spree.t(:search), :name => nil, :class => "btn btn-white" %>
+				<div class="form-group">
+					<label class="sr-only" for="textsearch">Enter text search</label>
+					<% cache(cache_key_for_taxons) do %>
+                    	<%= select_tag :taxon, options_for_select([[Spree.t(:all_departments), '']] + @taxons.map {|t| [t.name, t.id]}, @taxon ? @taxon.id : params[:taxon]), 'aria-label' => 'Taxon', :class => "form-control search-select" %>
+                    <% end %>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,150 @@
+@import "../_variables.scss";
+
+$black: #000;
+$lighter-black: #181818;
+$darker: #282828;
+$dark: #333;
+$grey: #999;
+$greyer: #666;
+$dark-grey: #ddd;
+$dark-white: #f0f0f0;
+$white: #fff;
+
+
+$red: #f64243;
+$violet: #a57bcd;
+$blue: #3598db;
+$brown: #c2a772;
+$green: #36c877;
+$orange: #e99b1f;
+$yellow: #e9bf1d;
+
+@mixin main-links {
+	color: $dark;
+	&:hover, &:focus {
+		color: $primary-color;
+	}
+}
+
+@mixin main-color {
+	color: $primary-color;
+}
+
+@mixin main-bg {
+	background-color: $primary-color;
+}
+
+@mixin main-border-color {
+	border-color: $primary-color;
+}
+
+@mixin font-14 {
+	font: {
+		family: Roboto Slab, serif;
+		size: 1em;
+	}
+}
+
+@mixin font-15 {
+	font: {
+		family: Roboto Slab, serif;
+		size: 1.071em;
+	}
+}
+
+@mixin font-24 {
+	font: {
+		family: Roboto Slab, serif;
+		size: 1.714em;
+		weight: 700;
+	}
+}
+
+@mixin title-60 {
+	font: {
+		family: Roboto Slab, serif;
+		size: 4.286em;
+		line-height: 1;
+	}
+	text-transform: uppercase;
+}
+
+@mixin line-through {
+	&:after {
+		border-top: 1px solid $dark-grey;
+		content: "";
+		left: 0;
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		z-index: 1;
+	}
+}
+
+@mixin title-line {
+ 
+	font: {
+		weight: 700;
+		size: 1.714em;
+	}
+  
+	margin-bottom: 50px;
+	position: relative;
+	text-align: center;
+	text-transform: uppercase;
+	
+	@include line-through;
+	
+	span {
+		background: $white;
+		padding: 0 40px;
+		position: relative;
+		z-index: 2; 
+	}
+  
+}
+
+@mixin fontdefault-14 {
+	font: {
+		size: 1em;
+		weight: 700;
+	}
+	text-transform: uppercase;
+}
+
+@mixin title-border {
+	@include fontdefault-14;
+	border-bottom: 2px solid $black;
+	padding-bottom: 15px;	
+}
+
+@mixin transition {
+	-webkit-transition: all 300ms;
+	-moz-transition: all 300ms;
+	transition: all 300ms;
+}
+
+@mixin arrow-down {
+	bottom: -5px;
+	height: 0;
+	border-top: 5px solid $primary-color;
+	border-left: 5px solid rgba(0,0,0,0);
+	border-right: 5px solid rgba(0,0,0,0);
+	content: "";
+	left: 50%;
+	margin-left: -5px;
+	position: absolute;
+	width: 0;
+}
+
+@mixin arrow-up {
+	height: 0;
+	border-bottom: 6px solid whitesmoke;
+	border-left: 6px solid rgba(0,0,0,0);
+	border-right: 6px solid rgba(0,0,0,0);
+	content: "";
+	left: 15px;
+	position: absolute;
+	top: -7px;
+	width: 0;
+}

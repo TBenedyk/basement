@@ -1,0 +1,58 @@
+<!-- Begin Main Slide -->
+<section class="main-slide">
+	<div id="owl-main-demo" class="owl-carousel main-demo">
+		<div class="item" id="item1"><%= image_tag "content/slides/slider1.jpg", :alt => "Photo" %>
+			<div class="item-caption">
+				<div class="item-caption-inner">
+					<p class="item-cat"><a href="#">Fall/Winter 2014</a></p>
+					<h2>Up to 50% off<br>on selected items</h2>
+					<a href="#" class="btn btn-white">Shop Now</a>
+				</div>
+			</div>
+		</div>
+		<div class="item" id="item2"><%= image_tag "content/slides/slider2.jpg", :alt => "Photo" %>
+			<div class="item-caption">
+				<div class="item-caption-inner">
+					<p class="item-cat"><a href="#">Top</a></p>
+					<h2>25% off<br>for pink swim</h2>
+					<a href="#" class="btn btn-white">Shop Now</a>
+				</div>
+			</div>
+		</div>
+		<div class="item" id="item3"><%= image_tag "content/slides/slider3.jpg", :alt => "Photo" %>
+			<div class="item-caption">
+				<div class="item-caption-inner">
+					<p class="item-cat"><a href="#">Panties</a></p>
+					<h2>Free shipping<br>on $50 plus $20</h2>
+					<a href="#" class="btn btn-white">Shop Now</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Begin New Products -->
+<section class="product-tab">
+	<div class="container">
+		<h2 class="title"><span>New Products</span></h2>		<!-- Tab panes -->
+		<div class="tab-content">
+			<div class="tab-pane active" id="man">
+				<div class="row">
+					<div class="col-xs-6 col-sm-3 animation">
+						<%= render "spree/products/product.html.erb", :product => Spree::Product.first %>
+					</div>
+					<div class="col-xs-6 col-sm-3 animation">
+						<%= render "spree/products/product.html.erb", :product => Spree::Product.first %>
+					</div>
+					<div class="col-xs-6 col-sm-3 animation">
+						<%= render "spree/products/product.html.erb", :product => Spree::Product.first %>
+					</div>
+					<div class="col-xs-6 col-sm-3 animation">
+						<%= render "spree/products/product.html.erb", :product => Spree::Product.first %>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End New Products -->

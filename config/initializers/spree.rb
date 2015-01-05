@@ -18,14 +18,19 @@ Spree.config do |config|
       large:    "600x600>"
     },
  
-    path:          ":rails_root/public/spree/products/:id/:style/:basename.:extension",
+    #path:          ":rails_root/public/spree/products/:id/:style/:basename.:extension",
+    path:          "/app/public/spree/products/:id/:style/:basename.:extension",
     default_url:   "/spree/products/:id/:style/:basename.:extension",
     default_style: "product",
+
   }
  
   attachment_config.each do |key, value|
     Spree::Image.attachment_definitions[:attachment][key.to_sym] = value
   end
+
+  config.products_per_page = 3
+
 end unless Rails.env.test?
 
 # Spree.user_class = "Spree::User"
