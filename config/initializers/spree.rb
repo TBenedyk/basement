@@ -29,7 +29,7 @@ Spree.config do |config|
     Spree::Image.attachment_definitions[:attachment][key.to_sym] = value
   end
 
-  config.products_per_page = 3
+  config.products_per_page = 12
 
 end unless Rails.env.test?
 

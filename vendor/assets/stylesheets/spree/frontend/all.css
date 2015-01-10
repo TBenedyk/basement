@@ -7,4 +7,11 @@
 
  *= require_self
  *= require_tree .
+ *= require spree/fancy
+ *= require custom
+
 */
+
+.hide-this %div, .hide-this .selected {
+	display: none;
+}

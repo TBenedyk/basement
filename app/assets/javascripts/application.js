@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require jquery.easydropdown.min
 //= require jquery.validate/jquery.validate.min
 //= require spree
 //= require spree/frontend/cart

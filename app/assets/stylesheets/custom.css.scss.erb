@@ -1,38 +1,137 @@
-.main-slide {
-	margin-bottom: 50px;
+body {
+	border-top: 5px solid #000000;
 }
 
-.form-search {
-	select.search-select {
-		width: 160px !important;
-		border: 2px solid #fff;
-		color: #fff;
-		margin-top: 10px;
-		background-image: url(<%= asset_path 'dropdown-button.png' %>);
-		background-repeat: no-repeat;
-		background-position: 100% 50%;
-	}
+
+footer#footer {
+	background-color: #000000;
+	border: none;
 }
 
-.padding {
-	padding-top: 50px;
-	padding-bottom: 50px;
+#subheader {
+	background-color: #000000;
+	box-shadow: none;
+	border-top: 5px solid #f2f2f2;
+	border-bottom: 5px solid #f2f2f2;
 }
 
-#product-variants {
-	ul {
-		padding: 0;
-		margin: 20px 0 10px;
-		li {
-			list-style-type: none;
-		}
-	}
+a {
+	color: #919191;
+}
+a:hover {
+	color: #ff9600;
 }
 
-#taxon-crumbs {
-	margin-top: 20px;
+span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child strong, #checkout-summary table #summary-order-total, #order_details td.price span, #order_details td.total span, #order_summary td.price span, #order_summary td.total span, table#cart-detail tbody#line_items tr td[data-hook="cart_item_price"], table#cart-detail tbody#line_items tr td[data-hook="cart_item_total"], div[data-hook="inside_cart_form"] #subtotal span.order-total,
+ul#products li a.info {
+	color: #919191;
 }
 
-.product-thumb-info-image {
-	height: 250px;
+nav#taxonomies .taxonomy-root, #sidebar_products_search .filter-title, .product-section-title,
+nav#taxonomies .taxonomy-root, #sidebar_products_search .filter-title, .product-section-title {
+	color: #ff9600 !important;
+}
+
+ul#products li .price {
+	color: #999999 !important;
+}
+
+nav#taxonomies .taxonomy-root, #sidebar_products_search .filter-title, .product-section-title {
+	color: #1abc9c;
+	border-bottom: 1px solid #1abc9c;
+}
+
+#latest-products .product-image a, #featured-products .product-image a, nav #main-nav-bar,
+ul#products li .product-image a {
+	border: none;
+}
+
+#latest-products h3, #featured-products h3 {
+	color: #919191;
+}
+
+#latest-products hr, #featured-products hr {
+	border-bottom-color: #DEDEDE;
+}
+
+#featured-products .bx-pager.bx-default-pager a.active, #featured-products .bx-pager.bx-default-pager a:hover,
+#latest-products .bx-pager.bx-default-pager a.active, #latest-products .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:hover {
+	background-color: #8A8A8A !important;
+}
+
+#latest-products .product-name {
+	color: #919191 !important;
+}
+
+#latest-products .product-name:hover, nav #main-nav-bar li a:hover, nav #main-nav-bar li a.active, nav#top-nav-bar li a:hover, nav#top-nav-bar li a.active,
+.cart-item-total, .order-total {
+	color: #ff9600 !important;
+}
+
+#subheader {
+	margin-bottom: 40px;
+}
+
+.product-image a, #home-slider ul li button, #home-slider ul li input[type="number"] {
+	border-color: #ccc;
+}
+
+.taxons-list li {
+	list-style-type: none;
+}
+
+#main-image, .progress-steps li.current, .progress-steps li.current-first, .progress-steps li.current-last {
+	border: none !important;
+}
+
+#product-thumbnails li.selected a {
+	border-color: #ccc;
+}
+
+table thead, .cart-subtotal, .cart-total, .cart-subtotal td h5, .cart-total td h5,
+#shipping_method .stock-location {
+	background-color: #E5E5E5;
+	color: #808080;
+	border: none;
+}
+
+table tbody tr.alt, table tbody tr.odd, table tfoot tr.alt, table tfoot tr.odd {
+	background-color: #F7F7F7;
+}
+
+.progress-steps li.completed-first, .progress-steps li.completed-last, .progress-steps li.completed {
+	background-color: #4F4F4F;
+}
+
+textarea:active, textarea:focus, input[type="date"]:active, input[type="date"]:focus, input[type="datetime"]:active, input[type="datetime"]:focus, input[type="datetime-local"]:active, input[type="datetime-local"]:focus, input[type="email"]:active, input[type="email"]:focus, input[type="month"]:active, input[type="month"]:focus, input[type="number"]:active, input[type="number"]:focus, input[type="password"]:active, input[type="password"]:focus, input[type="search"]:active, input[type="search"]:focus, input[type="tel"]:active, input[type="tel"]:focus, input[type="text"]:active, input[type="text"]:focus, input[type="time"]:active, input[type="time"]:focus, input[type="url"]:active, input[type="url"]:focus, input[type="week"]:active, input[type="week"]:focus {
+	border-color: #ff9600;
+}
+
+input[type="submit"], input[type="button"], input[type="reset"], button, a.button {
+	border-color: #ff9600;
+	background-color: #ffb64d;
+}
+
+ul#products {
+	max-width: none;
+}
+
+figure#logo img {
+	margin-bottom: 6px;
+	padding-top: 0;
+}
+
+header.row {
+	margin-bottom: 0;
+}
+
+#home-slider li {
+	height: 500px;
+	background-size: cover;
+	background-repeat: no-repeat !important;
+}
+
+.pagination .page.current {
+	background-color: #ff9600;
 }

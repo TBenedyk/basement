@@ -46,3 +46,5 @@ gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', :bran
 gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git', :branch => '2-3-stable'
 
 gem "font-awesome-rails"
+
+gem 'spree_fancy', :github => 'spree/spree_fancy', :branch => '2-3-stable'
