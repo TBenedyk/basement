@@ -10,7 +10,7 @@
 
 //= require_tree .
 //= require jquery.ui.all
-//= require jquery.easydropdown
+//= require jquery.easydropdown.min
 //= require jquery.bxslider.min
 //= require jquery.hoverIntent
 //= require jquery.dotdotdot
