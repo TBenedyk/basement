@@ -162,8 +162,6 @@ $(function(){
           if (statesRequired) {
             stateSelect.addClass('required');
           }
-          $(".hide-this .selected").hide();
-          $(".hide-this ul").hide();
           $("#order_bill_address_attributes_state_name").prop('disabled', false);
 
           if ($("select#order_bill_address_attributes_state_id")[0]) {
