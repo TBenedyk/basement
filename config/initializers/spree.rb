@@ -31,9 +31,6 @@ Spree.config do |config|
 
   config.products_per_page = 12
 
-  config.override_actionmailer_config = false
-  config.mails_from = "tobybenedyk@gmail.com"
-
 end unless Rails.env.test?
 
 # Spree.user_class = "Spree::User"
