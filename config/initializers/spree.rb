@@ -30,9 +30,9 @@ Spree.config do |config|
   end
 
   config.products_per_page = 12
-
-  config.override_actionmailer_config = true
+  config.override_actionmailer_config = false
   config.mails_from = "no-reply@thebasementlondon.com"
+end
 
 end unless Rails.env.test?
 
