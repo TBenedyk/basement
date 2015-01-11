@@ -62,17 +62,9 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
-  config.enable_mail_delivery = true
-  config.override_actionmailer_config = false
-  config.mails_from = "tobybenedyk@gmail.com"
+
 
   config.action_mailer.smtp_settings = {
-    address:              'smtp.gmail.com',
-    port:                 587,
-    domain:               'example.com',
-    user_name:            'tobybenedyk@gmail.com',
-    password:             'Tottenham100',
-    authentication:       'plain',
     enable_starttls_auto: true
   }
 
