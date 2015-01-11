@@ -30,6 +30,9 @@ Spree.config do |config|
   end
 
   config.products_per_page = 12
+  config.enable_mail_delivery = true
+  config.override_actionmailer_config = false
+  config.mails_from = "tobybenedyk@gmail.com"
 
 end unless Rails.env.test?
 
