@@ -31,6 +31,9 @@ Spree.config do |config|
 
   config.products_per_page = 12
 
+  config.override_actionmailer_config = true
+  config.mails_from = "no-reply@thebasementlondon.com"
+
 end unless Rails.env.test?
 
 # Spree.user_class = "Spree::User"
