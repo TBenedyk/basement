@@ -208,3 +208,11 @@ $(function(){
   });
 
 }).call(this);
+
+$(document).ready(function() {
+  $('.dropdown-link').hover((function() {
+    $(this).find("ul").show();
+  }), function() {
+    $(this).find("ul").hide();
+  });
+});
