@@ -19,7 +19,7 @@ a {
 	color: #919191;
 }
 a:hover {
-	color: #ff9600;
+	color: #000000;
 }
 
 span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child strong, #checkout-summary table #summary-order-total, #order_details td.price span, #order_details td.total span, #order_summary td.price span, #order_summary td.total span, table#cart-detail tbody#line_items tr td[data-hook="cart_item_price"], table#cart-detail tbody#line_items tr td[data-hook="cart_item_total"], div[data-hook="inside_cart_form"] #subtotal span.order-total,
@@ -29,7 +29,7 @@ ul#products li a.info, ul#products-list li a.info {
 
 nav#taxonomies .taxonomy-root, #sidebar_products_search .filter-title, .product-section-title,
 nav#taxonomies .taxonomy-root, #sidebar_products_search .filter-title, .product-section-title {
-	color: #ff9600 !important;
+	color: #000000 !important;
 }
 
 ul#products li .price, ul#products-list li .price {
@@ -66,7 +66,7 @@ ul#products li .product-image a, ul#products-list li .product-image a {
 
 #latest-products .product-name:hover, nav #main-nav-bar li a:hover, nav #main-nav-bar li a.active, nav#top-nav-bar li a:hover, nav#top-nav-bar li a.active,
 .cart-item-total, .order-total {
-	color: #ff9600 !important;
+	color: #000000 !important;
 }
 
 #subheader {
@@ -79,6 +79,9 @@ ul#products li .product-image a, ul#products-list li .product-image a {
 
 .taxons-list li {
 	list-style-type: none;
+	a {
+		font-size: 16px !important;
+	}
 }
 
 #main-image, .progress-steps li.current, .progress-steps li.current-first, .progress-steps li.current-last {
@@ -105,12 +108,18 @@ table tbody tr.alt, table tbody tr.odd, table tfoot tr.alt, table tfoot tr.odd {
 }
 
 textarea:active, textarea:focus, input[type="date"]:active, input[type="date"]:focus, input[type="datetime"]:active, input[type="datetime"]:focus, input[type="datetime-local"]:active, input[type="datetime-local"]:focus, input[type="email"]:active, input[type="email"]:focus, input[type="month"]:active, input[type="month"]:focus, input[type="number"]:active, input[type="number"]:focus, input[type="password"]:active, input[type="password"]:focus, input[type="search"]:active, input[type="search"]:focus, input[type="tel"]:active, input[type="tel"]:focus, input[type="text"]:active, input[type="text"]:focus, input[type="time"]:active, input[type="time"]:focus, input[type="url"]:active, input[type="url"]:focus, input[type="week"]:active, input[type="week"]:focus {
-	border-color: #ff9600;
+	border-color: #000000;
 }
 
 input[type="submit"], input[type="button"], input[type="reset"], button, a.button {
-	border-color: #ff9600;
-	background-color: #ffb64d;
+	border-color: #000000;
+	background-color: #000000;
+	border-radius: 0;
+}
+
+input[type="submit"]:hover, input[type="button"]:hover, input[type="reset"]:hover, button:hover, a.button:hover {
+	border-color: #000000;
+	background-color: #000000;
 }
 
 ul#products, ul#products-list {
@@ -136,7 +145,7 @@ header.row {
 	margin-top: 30px;
 }
 .pagination .page.current {
-	background-color: #ff9600;
+	background-color: #000000;
 }
 #main-nav-bar {
 	li {
@@ -256,6 +265,9 @@ ul#products-list li {
 	text-align: center;
 	font-weight: bold;
 	margin-bottom: 5px;
+	a {
+		color: #000 !important;
+	}
 	.product-image {
 		border: none;
 		min-height: 155px;
@@ -341,4 +353,35 @@ ul#products-list li {
 		margin: 20px 0;
 		float: left;
 	}
+}
+
+h6 {
+	font-size: 19px !important; 
+}
+
+span.price.selling {
+	font-size: 16px;
+	span {
+		color: #000 !important;
+	}
+}
+
+#similar_items_by_taxon {
+	a {
+		font-size: 18px;
+	}
+}
+
+#latest-products, #featured-products {
+	margin: 20px 0 !important;
+}
+
+#cart-item-description {
+	a {
+		color: #000 !important;
+	}
+}
+
+.progress-steps li.current, .progress-steps li.current-first, .progress-steps li.current-last {
+	background-color: #6E6E6E !important;
 }

@@ -135,9 +135,9 @@ module Spree
 
     def display_price(product_or_variant)
       if product_or_variant.on_sale?
-      	"<small><s>&pound;#{product_or_variant.original_price.to_f}</s></small> #{product_or_variant.price_in(current_currency).display_price.to_html}".html_safe
+      	"<s>&pound;#{number_with_precision(product_or_variant.original_price.to_f, :precision => 2)}</s> <span>#{product_or_variant.price_in(current_currency).display_price.to_html}</span>".html_safe
       else
-        product_or_variant.price_in(current_currency).display_price.to_html
+        "<span>#{product_or_variant.price_in(current_currency).display_price.to_html}</span>".html_safe
       end
     end
 
