@@ -20,4 +20,10 @@ Spree::HomeController.class_eval do
 
   end
 
+  def about
+  end
+
+  def contact
+  end
+
 end

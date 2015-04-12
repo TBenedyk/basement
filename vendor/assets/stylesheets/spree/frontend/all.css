@@ -9,4 +9,5 @@
  *= require_tree .
  *= require spree/fancy
  *= require custom
+ *= require font-awesome
 */
