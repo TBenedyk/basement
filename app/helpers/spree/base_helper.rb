@@ -175,6 +175,14 @@ module Spree
       end
     end
 
+    def product_image(product)
+      if product.images.empty?
+        image_tag "noimage/product.jpg"  
+      else
+        image_tag product.images.first.attachment.url(:large)  
+      end
+    end
+
     def create_product_image_tag(image, product, options, style)
       options.reverse_merge! alt: image.alt.blank? ? product.name : image.alt
       image_tag image.attachment.url(style), options
