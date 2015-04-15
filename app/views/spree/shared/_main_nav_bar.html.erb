@@ -4,7 +4,7 @@
     	<li class="dropdown-link" data-hook>
     		<%= link_to "Categories", "#", :remote => true %>
     		<ul>
-    			<% Spree::Taxonomy.find_by_name("Categories").root.children.sort_by { |c| c.name }.each do |category| %>
+    			<% Spree::Taxonomy.find_by_name("Departments").root.children.sort_by { |c| c.name }.each do |category| %>
     				<li><%= link_to "", "/t/#{category.permalink}" %><%= category.name %></li>
     			<% end %>
     		</ul>
@@ -12,7 +12,7 @@
       <li id="home-link" class="dropdown-link" data-hook>
         <%= link_to "Brands", "#", :remote => true %>
         <ul>
-          <% Spree::Taxonomy.find_by_name("Brand").root.children.sort_by { |c| c.name }.each do |brand| %>
+          <% Spree::Taxonomy.find_by_name("Brands").root.children.sort_by { |c| c.name }.each do |brand| %>
             <li><%= link_to "", "/t/#{brand.permalink}" %><%= brand.name %></li>
           <% end %>
         </ul>
