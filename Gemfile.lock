@@ -18,6 +18,13 @@ GIT
       spree_core (~> 2.3.0)
 
 GIT
+  remote: https://github.com/TBenedyk/spree_sales_acid
+  revision: 100b093e1d839f20fee90d7bf74af1e413e480b3
+  specs:
+    spree_sales_acid (2.3.4)
+      spree_core (~> 2.3.4)
+
+GIT
   remote: https://github.com/spree/spree_auth_devise.git
   revision: 8e5f91e3808ee18dc19aebe5a5675970419fef31
   branch: 2-3-stable
@@ -328,6 +335,7 @@ DEPENDENCIES
   spree_fancy!
   spree_gateway!
   spree_mail_settings!
+  spree_sales_acid!
   spring
   turbolinks
   uglifier (>= 1.3.0)
