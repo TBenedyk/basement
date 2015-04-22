@@ -22,7 +22,7 @@
       <% sale_products = sale.products.active if sale %>
       <% if sale_products %>
         <li>
-          <%= link_to "Sale", "/t/sale" %>
+          <%= link_to "Sale", "/t/sale", :style => "color:red;" %>
         </li>
       <% end %>
     </ul>

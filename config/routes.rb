@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   get '/about' => 'spree/home#about'
+  get '/terms' => 'spree/home#terms'
   get '/contact' => 'spree/home#contact'
 
 
