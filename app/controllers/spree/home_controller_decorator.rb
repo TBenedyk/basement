@@ -9,11 +9,11 @@ Spree::HomeController.class_eval do
     @slider_products = Spree::Product.first(8)
 
     featured = Spree::Taxon.where(:name => 'Featured').first
-    @featured_products = featured.products.active if featured
+    @featured_products = featured.products.active.first(20).reverse if featured
     @featured_products = @featured_products.select(uniq_method) if featured
 
     latest = Spree::Taxon.where(:name => 'Latest').first
-    @latest_products = latest.products.active if latest
+    @latest_products = latest.products.active.last(20).reverse if latest
     @latest_products = @latest_products.select(uniq_method) if latest
 
   end
