@@ -28,7 +28,6 @@ $(function(){
     var cached_carousel_2 = $('#latest-products .carousel').html();
 
     $('#home-slider > ul').bxSlider({
-      adaptiveHeight: true,
       auto: true,
       autoHover: true,
       useCSS: true,
