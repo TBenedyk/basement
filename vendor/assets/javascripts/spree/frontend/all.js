@@ -25,6 +25,9 @@ $(function(){
   $( "#product-variants .variants-buttons" ).buttonset();
   $( ".payment-method-selector").buttonset();
 
+  $("#home-slider").closest(".container").css("width", "auto");
+  $("#home-slider").closest(".subheader-wrapper").css("padding", "0");
+
   // Search hover
   var searchHoverConfig = {
     over: function(){
@@ -200,9 +203,6 @@ $(window).load(function() {
       watch: true,
       height: 250
     });
-
-    $("#home-slider").closest(".container").css("width", "auto");
-    $("#home-slider").closest(".subheader-wrapper").css("padding", "0");
 
     $('#home-slider > ul').bxSlider({
       auto: true,
