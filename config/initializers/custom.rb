@@ -10,11 +10,11 @@ Spree::Core::Search::Base.class_eval do
 	    		product_ids = []
 	    		encoded_scope = scope_attribute.map { |s| CGI::escape(s)}
 	    		Spree::Product.all.select { |p| p.price < 10 }
-	    		product_ids << Spree::Product.all.select { |p| p.price < 10 }.map(&:id) if encoded_scope.include?("Under+%C2%A310.00")
-	    		product_ids << Spree::Product.all.select { |p| p.price > 10 && p.price < 15 }.map(&:id) if encoded_scope.include?("%C2%A310.00+-+%C2%A315.00")
-	    		product_ids << Spree::Product.all.select { |p| p.price > 15 && p.price < 18 }.map(&:id) if encoded_scope.include?("%C2%A315.00+-+%C2%A318.00")
-	    		product_ids << Spree::Product.all.select { |p| p.price > 18 && p.price < 20 }.map(&:id) if encoded_scope.include?("%C2%A318.00+-+%C2%A320.00")
-	    		product_ids << Spree::Product.all.select { |p| p.price > 20 }.map(&:id) if encoded_scope.include?("%C2%A320.00+or+over")
+	    		product_ids << Spree::Product.all.select { |p| p.price < 10 }.map(&:id) if encoded_scope.include?("Under+%C2%A310.00+GBP")
+	    		product_ids << Spree::Product.all.select { |p| p.price > 10 && p.price < 15 }.map(&:id) if encoded_scope.include?("%C2%A310.00+GBP+-+%C2%A315.00+GBP")
+	    		product_ids << Spree::Product.all.select { |p| p.price > 15 && p.price < 18 }.map(&:id) if encoded_scope.include?("%C2%A315.00+GBP+-+%C2%A318.00+GBP")
+	    		product_ids << Spree::Product.all.select { |p| p.price > 18 && p.price < 20 }.map(&:id) if encoded_scope.include?("%C2%A318.00+GBP+-+%C2%A320.00+GBP")
+	    		product_ids << Spree::Product.all.select { |p| p.price > 20 }.map(&:id) if encoded_scope.include?("%C2%A320.00+GBP+or+over")
 	    		base_scope = base_scope.merge(Spree::Product.where("spree_products.id IN (?)", product_ids.flatten))
 	    	else
 	      	base_scope = base_scope.merge(Spree::Product.ransack({scope_name => scope_attribute}).result)
