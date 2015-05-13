@@ -2,13 +2,13 @@ Spree::Core::Search::Base.class_eval do
 
 
     def retrieve_products
-        @products = get_base_scope.order("spree_products.created_at DESC")
+        @products = get_base_scope
         curr_page = page || 1
 
         unless Spree::Config.show_products_without_price
-          @products = @products.where("spree_prices.amount IS NOT NULL").where("spree_prices.currency" => current_currency).order("spree_products.created_at DESC")
+          @products = @products.where("spree_prices.amount IS NOT NULL").where("spree_prices.currency" => current_currency)
         end
-        @products = @products.page(curr_page).per(per_page)
+        @products = @products.order("spree_products.created_at DESC").page(curr_page).per(per_page)
     end
 
 	def add_search_scopes(base_scope)
