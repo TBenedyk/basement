@@ -10,7 +10,7 @@ module Spree
       return unless @taxon
 
       @searcher = build_searcher(params.merge(taxon: @taxon.id, include_images: true))
-      @products = @searcher.retrieve_products.order("spree_products.created_at DESC")
+      @products = @searcher.retrieve_products
       @taxonomies = Spree::Taxonomy.includes(root: :children)
     end
 
