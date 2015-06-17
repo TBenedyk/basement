@@ -1,8 +1,8 @@
 Spree.config do |config|
   attachment_config = {
     s3_credentials: {
-      access_key_id: "AKIAIKGSEBQG2MWGJTBA",
-      secret_access_key: "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",
+      access_key_id: "",
+      secret_access_key: "",
       bucket: "basement-images",
     },
  
