@@ -57,7 +57,7 @@ module Spree
         products = category_products + brand_products + size_products
         products = products.find_all { |e| products.count(e) > 2 }.uniq
 
-        if params["search"]["price_range_any"]
+        if params["search"] && params["search"]["price_range_any"]
           prices = params["search"]["price_range_any"]
           price_products = []
           ranges = []
