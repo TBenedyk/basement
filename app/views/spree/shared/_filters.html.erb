@@ -10,12 +10,16 @@
         <% labels.each do |nm,val| %>
           <% label = "#{filter[:name]}_#{nm}".gsub(/\s+/,'_') %>
           <li class="nowrap">
-            <input type="checkbox"
-                   id="<%= label %>"
-                   name="search[<%= filter[:scope].to_s %>][]"
-                   value="<%= val %>"
-                   checked=""
-                   />
+            <% input = "<input type='checkbox' id='#{label}' name='search[#{filter[:scope].to_s}][]' value='#{val}'" %>
+
+            <% if params["search"] && params["search"]["price_range_any"] && params["search"]["price_range_any"].include?(nm) %>
+              <% input +=  " checked />" %>
+            <% else %>
+              <% input +=  "/>" %>
+            <% end %>
+
+            <%= input.html_safe %>
+
             <label class="nowrap" for="<%= label %>"> <%= nm %> </label>
           </li>
         <% end %>
