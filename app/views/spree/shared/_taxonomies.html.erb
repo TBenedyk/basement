@@ -1,0 +1,7 @@
+<% max_level = Spree::Config[:max_level_in_taxons_menu] || 1 %>
+<nav class="sidebar-item" data-hook>
+  <% @taxonomies.each do |taxonomy| %>
+      <h6 class='taxonomy-root'><%= Spree.t(:shop_by_taxonomy, :taxonomy => taxonomy.name) %></h6>
+      <%= taxons_tree(taxonomy.root, @taxon, @categories, @brands, @sizes, max_level) %>
+    <% end %>
+</nav>

@@ -93,14 +93,42 @@ module Spree
       content_tag(:nav, crumb_list, id: 'breadcrumbs', class: 'sixteen columns')
     end
 
-    def taxons_tree(root_taxon, current_taxon, max_level = 1)
+    def taxons_tree(root_taxon, current_taxon, categories, brands, sizes, max_level = 1)
       return '' if max_level < 1 || root_taxon.children.empty?
       content_tag :ul, class: 'taxons-list' do
         root_taxon.children.map do |taxon|
           css_class = (current_taxon && current_taxon.self_and_ancestors.include?(taxon)) ? 'current' : nil
           content_tag :li, class: css_class do
-           link_to(taxon.name, seo_url(taxon)) +
-           taxons_tree(taxon, current_taxon, max_level - 1)
+            if taxon.permalink.split("/")[0].include?("categories")
+              name = "category"
+              p categories
+              p taxon
+              p "CATS HERE"
+              if categories && categories.include?(taxon.name.downcase) || categories.include?(taxon.permalink.downcase)
+                ticked = "checked"
+              elsif categories.blank?
+                ticked = "checked"
+              end
+            elsif taxon.permalink.split("/")[0].include?("brand")
+              name = "brand"
+              if brands && brands.include?(taxon.name.downcase)
+                ticked = "checked"
+              elsif brands.blank?
+                ticked = "checked"
+              end
+            else
+              name = "size"
+              if sizes && sizes.include?(taxon.name.downcase)
+                ticked = "checked"
+              elsif sizes.blank?
+                ticked = "checked"
+              end
+            end
+
+            ticked ||= ""
+
+            "<input id='#{taxon.name}' name='#{name}[#{taxon.name}]' type='checkbox' value='#{taxon.name}' #{ticked}>
+            <label class='nowrap'>#{taxon.name}</label>".html_safe
           end
         end.join("\n").html_safe
       end
