@@ -101,9 +101,6 @@ module Spree
           content_tag :li, class: css_class do
             if taxon.permalink.split("/")[0].include?("categories")
               name = "category"
-              p categories
-              p taxon
-              p "CATS HERE"
               if categories && categories.include?(taxon.name.downcase) || categories.include?(taxon.permalink.downcase)
                 ticked = "checked"
               elsif categories.blank?
@@ -111,7 +108,7 @@ module Spree
               end
             elsif taxon.permalink.split("/")[0].include?("brand")
               name = "brand"
-              if brands && brands.include?(taxon.name.downcase)
+              if brands && brands.include?(taxon.name.downcase) || brands.include?(taxon.permalink)
                 ticked = "checked"
               elsif brands.blank?
                 ticked = "checked"

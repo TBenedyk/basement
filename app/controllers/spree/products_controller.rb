@@ -59,7 +59,7 @@ module Spree
         @searcher = build_searcher(params.merge(include_images: true))
         @products = @searcher.retrieve_products
       end
-      @taxonomies = Spree::Taxonomy.includes(root: :children)
+      @taxonomies = Spree::Taxonomy.where("name IN (?)", ["Departments", "Brands", "Size"]).includes(root: :children)
     end
 
     def show

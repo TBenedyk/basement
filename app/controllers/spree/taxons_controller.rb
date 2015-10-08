@@ -83,7 +83,7 @@ module Spree
         @taxons.map(&:products).flatten
       end
       
-      @taxonomies = Spree::Taxonomy.includes(root: :children)
+      @taxonomies = Spree::Taxonomy.where("name IN (?)", ["Departments", "Brands", "Size"]).includes(root: :children)
     end
 
     private
